@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Generation Time: Jul 13, 2026 at 12:47 AM
+-- Generation Time: Jul 13, 2026 at 10:13 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.1.25
 
@@ -50,12 +50,14 @@ INSERT INTO `anggota` (`id_anggota`, `nama_anggota`, `jk`, `kelas`, `tgl_registr
 ('ID0008', 'Arkana Lutfhi', 'Laki-Laki', '4-B', '2026-05-27'),
 ('ID0009', 'Sharina Nurul', 'Perempuan', '5-A', '2027-05-31'),
 ('ID0010', 'Xavier Alden', 'Laki-Laki', '5-B', '2026-06-02'),
-('ID0011', 'Zayyan Alfatih', 'Laki-Laki', '6-A', '2026-06-06'),
 ('ID0012', 'Gavin Narendra', 'Laki-Laki', '6-B', '2026-06-14'),
 ('ID0013', 'Miftahul Zanah', 'Perempuan', '1-A', '2026-06-18'),
 ('ID0014', 'Afifah Achmad', 'Perempuan', '1-B', '2026-06-23'),
-('ID0015', 'Raden Wijaya', 'Laki-Laki', '2-A', '2026-06-29'),
-('ID0016', 'Aisha Humaira', 'Perempuan', '2-B', '2026-06-08');
+('ID0015', 'Raden Wijaya', 'Laki-Laki', '4-A', '2026-06-29'),
+('ID0016', 'Aisha Humaira', 'Perempuan', '2-B', '2026-06-08'),
+('ID0017', 'Adnan Thariq', 'Laki-Laki', '3-A', '2026-06-13'),
+('ID0018', 'Putri Zafira', 'Perempuan', '3-B', '2026-06-17'),
+('ID0019', 'Alifia Aulia', 'Perempuan', '5-B', '2026-07-13');
 
 -- --------------------------------------------------------
 
@@ -83,7 +85,12 @@ INSERT INTO `buku` (`id_buku`, `isbn`, `judul`, `penulis`, `penerbit`, `tahun`, 
 ('BK0002', '978-623-254-520-5', 'Komik KKPK: My Supermom', 'Hilya Faizzati Mardliyah, Dkk.', 'Dar! Mizan', '2024', 'Karya Umum', 11),
 ('BK0003', '978-623-307-005-8', 'Ayo, Mengenal Negara ASEAN!', 'Olany Agus Widiyani', 'Badan Bahasa', '2020', 'Ilmu Sosial', 52),
 ('BK0004', '978-602-467-782-4', 'Ensiklopedia Sains: Memahami Sains', 'Om Books International', 'PT Penerbit Erlangga', '2023', 'Sains & Matematika', 80),
-('BK0005', '978-623-254-240-2', 'KKPK REG: Sahabat Pena Istimewa', 'Aisya Najwa Kirana Alenty', 'Dar! Mizan', '2022', 'Karya Umum', 7);
+('BK0005', '978-623-254-240-2', 'KKPK REG: Sahabat Pena Istimewa', 'Aisya Najwa Kirana Alenty', 'Dar! Mizan', '2022', 'Karya Umum', 7),
+('BK0006', '978-602-052-278-9', 'Atlas Indonesia dan Dunia', 'Tim Grasindo', 'Grasindo', '2021', 'Sejarah & Geografi', 50),
+('BK0007', '978-979-014-567-7', 'Bahasa Inggris untuk SD Kelas IV', 'Siti Rohani', 'Yudhistira', '2022', 'Bahasa', 139),
+('BK0008', '978-979-295-998-2', 'Mengenal Komputer dan Internet', 'Madcoms', 'Andi Offset', '2020', 'Teknologi', 76),
+('BK0009', '978-623-266-845-9', 'Pahlawan Nasional Indonesia', 'Tim Erlangga', 'Erlangga', '2021', 'Sejarah & Geografi', 95),
+('BK0011', '978-623-6213-50-6', 'Kidzopedia: Alam Semesta', 'Ana Falesthein, Dkk', 'Visi Mandiri, Surakarta', '2023', 'Sains & Matematika', 5);
 
 -- --------------------------------------------------------
 
@@ -105,7 +112,10 @@ CREATE TABLE `denda` (
 
 INSERT INTO `denda` (`id_denda`, `tgl_pembayaran`, `jumlah_denda`, `id_kembali`, `id_petugas`) VALUES
 ('PAY0001', '2026-07-13', '1000', 'MK0006', 'PG0005'),
-('PAY0002', '2026-07-13', '5000', 'MK0010', 'PG0005');
+('PAY0002', '2026-07-13', '5000', 'MK0010', 'PG0005'),
+('PAY0003', '2026-07-13', '3000', 'MK0013', 'PG0007'),
+('PAY0004', '2026-07-13', '1000', 'MK0006', 'PG0001'),
+('PAY0005', '2026-07-13', '3000', 'MK0013', 'PG0001');
 
 -- --------------------------------------------------------
 
@@ -131,27 +141,11 @@ INSERT INTO `isi` (`id_nota`, `id_buku`) VALUES
 ('MP0005', 'BK0001'),
 ('MP0006', 'BK0001'),
 ('MP0007', 'BK0001'),
-('MP0008', 'BK0001'),
-('MP0009', 'BK0001'),
-('MP0010', 'BK0001'),
-('MP0011', 'BK0001'),
-('MP0012', 'BK0001'),
-('MP0013', 'BK0001'),
-('MP0014', 'BK0001'),
-('MP0015', 'BK0001'),
-('MP0016', 'BK0001'),
-('MP0017', 'BK0001'),
-('MP0018', 'BK0001'),
-('MP0019', 'BK0001'),
-('MP0020', 'BK0001'),
-('MP0021', 'BK0001'),
-('MP0022', 'BK0001'),
-('MP0024', 'BK0001'),
-('MP0008', 'BK0005'),
-('MP0008', 'BK0003'),
-('MP0009', 'BK0004'),
-('MP0010', 'BK0003'),
-('MP0010', 'BK0005');
+('MP0011', 'BK0003'),
+('MP0011', 'BK0004'),
+('MP0012', 'BK0002'),
+('MP0012', 'BK0007'),
+('MP0013', 'BK0001');
 
 -- --------------------------------------------------------
 
@@ -181,7 +175,10 @@ INSERT INTO `nota` (`id_nota`, `tgl_nota`, `id_anggota`, `id_petugas`, `jatuh_te
 ('MP0007', '2026-07-07', 'ID0002', 'PG0002', '2026-07-12'),
 ('MP0008', '2026-07-13', 'ID0016', 'PG0002', '2026-07-20'),
 ('MP0009', '2026-07-01', 'ID0015', 'PG0002', '2026-07-08'),
-('MP0010', '2026-07-13', 'ID0006', 'PG0005', '2026-07-20');
+('MP0010', '2026-07-13', 'ID0006', 'PG0005', '2026-07-20'),
+('MP0011', '2026-07-13', 'ID0010', 'PG0007', '2026-07-20'),
+('MP0012', '2026-07-13', 'ID0016', 'PG0001', '2026-07-20'),
+('MP0013', '2026-07-13', 'ID0001', 'PG0001', '2026-07-20');
 
 -- --------------------------------------------------------
 
@@ -209,10 +206,14 @@ INSERT INTO `pengembalian` (`id_kembali`, `tgl_nota`, `denda`, `id_nota`, `id_pe
 ('MK0005', '2026-07-13', '1000', 'MP0004', 'PG0001'),
 ('MK0006', '2026-07-13', '1000', 'MP0001', 'PG0001'),
 ('MK0007', '2026-07-13', '0', 'MP0018', 'PG0002'),
-('MK0008', '2026-07-13', '', 'MP0008', 'PG0002'),
 ('MK0009', '2026-07-13', '5000', 'MP0009', 'PG0005'),
 ('MK0010', '2026-07-13', '5000', 'MP0009', 'PG0001'),
-('MK0011', '2026-07-13', '0', 'MP0010', 'PG0001');
+('MK0011', '2026-07-13', '0', 'MP0010', 'PG0001'),
+('MK0012', '2026-07-16', '0', 'MP0011', 'PG0007'),
+('MK0013', '2026-07-23', '3000', 'MP0011', 'PG0007'),
+('MK0014', '2026-05-13', '0', 'MP0013', 'PG0001'),
+('MK0015', '2026-07-13', '1000', 'MP0007', 'PG0001'),
+('MK0016', '2026-07-13', '0', 'MP0012', 'PG0001');
 
 -- --------------------------------------------------------
 
@@ -237,10 +238,10 @@ INSERT INTO `petugas` (`id_petugas`, `nama_petugas`, `jk`, `no_telp`, `alamat`, 
 ('PG0001', 'Rizky Febian', 'Laki-Laki', '082156792248', 'Tangerang', '123'),
 ('PG0002', 'Mahalini', 'Perempuan', '087763259147', 'Bekasi', 'lini~'),
 ('PG0003', 'Tulus', 'Laki-Laki', '082366150478', 'Bogor', 'tls075'),
-('PG0004', 'Tiara Andini', 'Perempuan', '085800213698', 'Jakarta Barat', 'titi99'),
 ('PG0005', 'Fiersa Besari', 'Laki-Laki', '082150364430', 'Jakarta Pusat', 'bungfiersa!'),
 ('PG0006', 'Hanggini', 'Perempuan', '085613704281', 'Depok', '45hanggini_'),
-('PG0007', 'Baskara', 'Laki-Laki', '083891476552', 'Jakarta Timur', 'hindia0');
+('PG0007', 'Baskara', 'Laki-Laki', '083891476552', 'Tebet', 'hindia0'),
+('PG0008', 'Mario', 'Laki-Laki', '081234567890', 'Jl. Kalibata', '2529');
 
 --
 -- Indexes for dumped tables
